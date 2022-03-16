@@ -7,15 +7,14 @@
           <a [routerLink]="['/login']">Have an account?</a>
         </p>
         BackendErrors are here
-        <form action="">
+        <form [formGroup]="form">
           <fieldset>
             <fieldset class="form-group">
               <input
                 type="text"
                 class="form-control from-control-lg"
                 placeholder="Username"
-                name=""
-                id=""
+                fromControlName="username"
               />
             </fieldset>
 
@@ -24,8 +23,7 @@
                   type="text"
                   class="form-control from-control-lg"
                   placeholder="Email"
-                  name=""
-                  id=""
+                  fromControlName="email"
                 />
               </fieldset>
 
@@ -34,8 +32,7 @@
                   type="password"
                   class="form-control from-control-lg"
                   placeholder="Password"
-                  name=""
-                  id=""
+                  fromControlName="password"
                 />
               </fieldset>
               <button class="btn btn-lg btn-primary pull-xs-right" type="submit">
